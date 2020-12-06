@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="unknown_error">Unknown error!</string>
+    <string name="no_articles_found">No articles found!</string>
+    <string name="no_articles">Try searching for something different.</string>
+    <string name="search_title">Search</string>
+    <string name="type_to_search">What strikes your fancy?!</string>
+    <string name="something_went_wrong">Ops, something went wrong!</string>
+    <string name="search_for_something">Let\&apos;s search for something!</string>
+    <string name="no_category_articles">Try another category.</string>
+    <string name="empty_string"> </string>
+</resources>

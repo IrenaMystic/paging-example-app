@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoryFragment">
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.irenaljubik.newsapp.ui.categories.CategoryFragment"
+        android:label="CategoryFragment">
+        <action
+            android:id="@+id/action_categoryFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.irenaljubik.newsapp.ui.articles.ArticlesFragment"
+        android:label="ArticlesFragment">
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleDetailsActivity"
+            app:destination="@id/articleDetailsActivity"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_articlesFragment"
+        app:destination="@id/articlesFragment" />
+    <activity
+        android:id="@+id/articleDetailsActivity"
+        android:name="com.irenaljubik.newsapp.ui.articledetails.ArticleDetailsActivity"
+        android:label="ArticleDetailsActivity">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </activity>
+</navigation>
